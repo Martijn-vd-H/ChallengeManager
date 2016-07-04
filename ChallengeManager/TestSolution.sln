@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleColorPickerTest", "SimpleColorPickerTest\SimpleColorPickerTest.csproj", "{CCAA51FE-14BF-422C-A693-443914E13C1C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallengeManager", "CodeChallegeManager\CodeChallengeManager.csproj", "{20669BCE-118F-4398-BB32-5AF30BBEC6A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallengeManager.Test", "CodeChallengeManager.Test\CodeChallengeManager.Test.csproj", "{5A5F6D5A-E53A-420A-B2A2-5E13E5007F68}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CCAA51FE-14BF-422C-A693-443914E13C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CCAA51FE-14BF-422C-A693-443914E13C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CCAA51FE-14BF-422C-A693-443914E13C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CCAA51FE-14BF-422C-A693-443914E13C1C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{20669BCE-118F-4398-BB32-5AF30BBEC6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{20669BCE-118F-4398-BB32-5AF30BBEC6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20669BCE-118F-4398-BB32-5AF30BBEC6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
