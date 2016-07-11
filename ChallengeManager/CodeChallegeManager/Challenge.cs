@@ -13,6 +13,9 @@ namespace CodeChallengeManager
 
     public class Solution
     {
-
+        public Solution()
+        {
+            
+        }
     }
 }
