@@ -4,21 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CodeChallengeManager"
+        xmlns:parameterGrid="clr-namespace:Dpi.Fw.SyncFusion.ParameterGrid;assembly=DpiNet.Fw.SyncFusion"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <DataGrid Grid.Column="0"></DataGrid>
+        <parameterGrid:ParameterGrid Grid.Column="0" />
         <Grid Grid.Column="1">
           <Grid.RowDefinitions>
               <RowDefinition></RowDefinition>
               <RowDefinition></RowDefinition>
           </Grid.RowDefinitions>
-            <local:DescriptionControl Grid.Row="0"></local:DescriptionControl>
+            <local:DescriptionControl Grid.Row="0" />
             <local:SolutionControl Grid.Row="1"></local:SolutionControl>
         </Grid>
     </Grid>
 </Window>
+
+
+
