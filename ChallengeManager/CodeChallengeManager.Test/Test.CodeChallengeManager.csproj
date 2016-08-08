@@ -6,8 +6,8 @@
     <ProjectGuid>{5A5F6D5A-E53A-420A-B2A2-5E13E5007F68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CodeChallengeManager.Test</RootNamespace>
-    <AssemblyName>CodeChallengeManager.Test</AssemblyName>
+    <RootNamespace>Test.CodeChallengeManager</RootNamespace>
+    <AssemblyName>Test.CodeChallengeManager</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -53,7 +53,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="CompilationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +61,9 @@
       <Project>{20669bce-118f-4398-bb32-5af30bbec6a7}</Project>
       <Name>CodeChallengeManager</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CCMData.xml" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
