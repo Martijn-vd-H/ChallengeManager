@@ -10,10 +10,10 @@ namespace CodeChallengeManager.Test
     [TestClass]
     public class CompilationTest
     {
-        private MainViewModel _mainViewModel;
+        private static MainViewModel _mainViewModel;
 
         [ClassInitialize]
-        public void InitializeTestClass()
+        private static void InitializeTestClass()
         {
             _mainViewModel = new MainViewModel();
         }
@@ -56,19 +56,6 @@ namespace CodeChallengeManager.Test
             Assert.IsTrue(_mainViewModel.Challenges.Any(a => a.Name.Equals(challengeName)));
         }
 
-        [TestMethod]
-        //[DeploymentItemAttribute("CCM")
-        public void LoadData()
-        {
-            var codeChallengeManager = new MainViewModel();
-            Challenge challenge = codeChallengeManager.LoadData();
-            Assert.IsNotNull(challenge);
-        }
-
-        [TestMethod]
-        public void SaveData()
-        {
-
-        }
+    
     }
 }
