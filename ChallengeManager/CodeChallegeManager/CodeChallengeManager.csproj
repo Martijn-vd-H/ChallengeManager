@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DpiNET.Fw">
+      <HintPath>..\..\..\DpiWerk\versie-7.5-sp4\bin\Release\DpiNET.Fw.dll</HintPath>
+    </Reference>
     <Reference Include="DpiNET.Fw.Resources">
       <HintPath>..\..\..\DpiWerk\versie-7.5-sp4\bin\Release\DpiNET.Fw.Resources.dll</HintPath>
     </Reference>
