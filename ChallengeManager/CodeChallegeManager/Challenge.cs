@@ -8,15 +8,21 @@ namespace CodeChallengeManager
 {
     public class Challenge
     {
-        private XElement root;
-
         public Challenge()
         {
         }
 
+       
+
+
         public Challenge(XElement root)
         {
-            this.root = root;
+            Populate(root);
+        }
+
+        private void Populate(XElement root)
+        {
+            throw new NotImplementedException();
         }
 
         public String Description { get; set; }
@@ -24,6 +30,36 @@ namespace CodeChallengeManager
 
         public IEnumerable<TestParameters> TestValues { get; set; }
         public string Name { get; set; }
+
+        #region Equality Members
+
+        protected bool Equals(Challenge other)
+        {
+            return string.Equals(Description, other.Description) && Equals(Solution, other.Solution) && Equals(TestValues, other.TestValues) &&
+                   string.Equals(Name, other.Name);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Challenge)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = (Description != null ? Description.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (Solution != null ? Solution.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (TestValues != null ? TestValues.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (Name != null ? Name.GetHashCode() : 0);
+                return hashCode;
+            }
+        }
+
+        #endregion
     }
 
     public class TestParameters

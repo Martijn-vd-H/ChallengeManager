@@ -9,10 +9,12 @@ namespace CodeChallengeManager
 {
     public class MainViewModel
     {
-        public Challenge LoadData()
+        public string DataFilePath { get; set; }
+
+        public void LoadData()
         {
-            var dataDoc = XDocument.Load("CCMData.xml");
-            return new Challenge(dataDoc.Root);
+            var dataDoc = XDocument.Load(DataFilePath);
+            Challenges = new ObservableCollection<Challenge>(dataDoc.Elements("Challenges").Select(a => new Challenge(a)));
         }
 
         public string RunSolution(Solution testSolution)
@@ -26,5 +28,10 @@ namespace CodeChallengeManager
         }
 
         public ObservableCollection<Challenge> Challenges { get; set; }
+
+        public void SaveData()
+        {
+            
+        }
     }
 }
