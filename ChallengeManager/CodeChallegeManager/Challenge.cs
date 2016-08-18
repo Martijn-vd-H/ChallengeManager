@@ -12,9 +12,6 @@ namespace CodeChallengeManager
         {
         }
 
-       
-
-
         public Challenge(XElement root)
         {
             Populate(root);
@@ -22,7 +19,10 @@ namespace CodeChallengeManager
 
         private void Populate(XElement root)
         {
-            throw new NotImplementedException();
+            Name = root.Attribute("Name").Value;
+            Description = root.Element("Description").Value;
+            Solution = new Solution(root.Element("Solution"));
+            TestValues = root.Elements("TestParameters").Select(a => new TestParameters(a));
         }
 
         public String Description { get; set; }
@@ -33,18 +33,12 @@ namespace CodeChallengeManager
 
         #region Equality Members
 
-        protected bool Equals(Challenge other)
+        public bool Equals(Challenge other)
         {
-            return string.Equals(Description, other.Description) && Equals(Solution, other.Solution) && Equals(TestValues, other.TestValues) &&
+            return string.Equals(Description, other.Description) && 
+                Equals(Solution, other.Solution) && 
+                //Equals(TestValues, other.TestValues) &&
                    string.Equals(Name, other.Name);
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
-            return Equals((Challenge)obj);
         }
 
         public override int GetHashCode()
@@ -64,6 +58,16 @@ namespace CodeChallengeManager
 
     public class TestParameters
     {
+        public TestParameters()
+        {
+        }
+
+        public TestParameters(XElement xElement)
+        {
+            Input = xElement.Element("Input")?.Value;
+            Output = xElement.Element("Output")?.Value;
+        }
+
         public string Input { get; set; }
         public string Output { get; set; }
     }
