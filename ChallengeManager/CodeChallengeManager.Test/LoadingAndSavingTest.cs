@@ -73,16 +73,22 @@ namespace Test.CodeChallengeManager
         {
             var codeChallengeManager = new MainViewModel();
             codeChallengeManager.DataFilePath = @"D:\Github\ChallengeManager\CodeChallengeManager.Test\CCMData.xml";
-            Challenge challenge = codeChallengeManager.LoadData();
-            Assert.IsNotNull(challenge);
+            codeChallengeManager.LoadData();
+            Assert.IsTrue(codeChallengeManager.Challenges.Any());
         }
 
         [TestMethod]
         public void SaveData()
         {
             var testChallenge = GetTestChallenge();
-            _mainViewModel.DataFilePath = @"D:\Github\ChallengeManager\CodeChallengeManager.Test\CCMData.xml"
+            _mainViewModel.Challenges.Add(testChallenge);
+            _mainViewModel.DataFilePath = @"D:\Github\ChallengeManager\CodeChallengeManager.Test\CCMData.xml";
             _mainViewModel.SaveData();
+
+            _mainViewModel.LoadData();
+
+            Assert.IsTrue(_mainViewModel.Challenges.Count == 1);
+            Assert.IsTrue(_mainViewModel.Challenges.First().Equals(testChallenge));
         }
 
         private static Challenge GetTestChallenge()
