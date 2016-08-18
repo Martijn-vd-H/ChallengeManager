@@ -72,7 +72,7 @@ namespace Test.CodeChallengeManager
         public void LoadData()
         {
             var codeChallengeManager = new MainViewModel();
-            codeChallengeManager.DataFilePath = @"D:\Github\ChallengeManager\CodeChallengeManager.Test\CCMData.xml";
+            codeChallengeManager.DataFilePath = TestHelperFunctions.GetTestDataFilePath();
             codeChallengeManager.LoadData();
             Assert.IsTrue(codeChallengeManager.Challenges.Any());
         }
@@ -80,9 +80,9 @@ namespace Test.CodeChallengeManager
         [TestMethod]
         public void SaveData()
         {
-            var testChallenge = GetTestChallenge();
+            var testChallenge = TestHelperFunctions.GetCompleteTestChallenge();
             _mainViewModel.Challenges.Add(testChallenge);
-            _mainViewModel.DataFilePath = @"D:\Github\ChallengeManager\CodeChallengeManager.Test\CCMData.xml";
+            _mainViewModel.DataFilePath = TestHelperFunctions.GetTestDataFilePath();
             _mainViewModel.SaveData();
 
             _mainViewModel.LoadData();
@@ -91,18 +91,6 @@ namespace Test.CodeChallengeManager
             Assert.IsTrue(_mainViewModel.Challenges.First().Equals(testChallenge));
         }
 
-        private static Challenge GetTestChallenge()
-        {
-            return new Challenge()
-            {
-                Description = "1 + 1 = ?",
-                Name = "TestChallenge",
-                Solution = new Solution()
-                {
-                    Code = "return 1 + 1;"
-                },
-                TestValues = new List<TestParameters> { new TestParameters() { Input = null, Output = "2" } },
-            };
-        }
+     
     }
 }

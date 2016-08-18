@@ -8,13 +8,13 @@ namespace Test.Framework
     public class CompilerTest
     {
         [TestMethod]
-        public void CompileCodeTest()
+        public void RunCodeTest()
         {
-            var code = "var j = 0;\n" +
-                       "\tfor(var i = 0; i < 100; i++)\n\t{\n\t\tj += i * 2;\n\t\t}\n" +
-                       "return j";
+            var code = "return 1 + 1;";
 
-            Compiler.Compile(code);
+            var result = Compiler.Run(code);
+
+            Assert.IsTrue(result == "2");
         }
     }
 }

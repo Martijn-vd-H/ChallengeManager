@@ -11,5 +11,10 @@ namespace Framework
         {
             throw new NotImplementedException();
         }
+
+        public static string Run(string code)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
