@@ -20,7 +20,7 @@ namespace CodeChallengeManager
 
         public string RunSolution(Solution testSolution)
         {
-            return Framework.Compiler.Run(testSolution.Code);
+            return ScriptEngine.Compiler.Run(testSolution.Code);
         }
 
         public void AddChallenge(Challenge challenge)

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallengeManager", "CodeChallegeManager\CodeChallengeManager.csproj", "{20669BCE-118F-4398-BB32-5AF30BBEC6A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.CodeChallengeManager", "CodeChallengeManager.Test\Test.CodeChallengeManager.csproj", "{5A5F6D5A-E53A-420A-B2A2-5E13E5007F68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{8DB6FAD6-FBAE-4F4E-9CBE-EB05E71D3373}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptEngine", "Framework\ScriptEngine.csproj", "{8DB6FAD6-FBAE-4F4E-9CBE-EB05E71D3373}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Framework", "Test.Framework\Test.Framework.csproj", "{C0DDE4DF-A2CE-4CDB-9911-EFE98177E2E4}"
 EndProject

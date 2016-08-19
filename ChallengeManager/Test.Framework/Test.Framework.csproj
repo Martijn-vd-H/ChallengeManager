@@ -57,9 +57,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Framework\Framework.csproj">
+    <ProjectReference Include="..\Framework\ScriptEngine.csproj">
       <Project>{8db6fad6-fbae-4f4e-9cbe-eb05e71d3373}</Project>
-      <Name>Framework</Name>
+      <Name>ScriptEngine</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
