@@ -5,19 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CodeChallengeManager"
         xmlns:parameterGrid="clr-namespace:Dpi.Fw.SyncFusion.ParameterGrid;assembly=DpiNet.Fw.SyncFusion"
+        xmlns:wpfControls="clr-namespace:Dpi.Fw.WpfControls;assembly=DpiNET.Fw"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="800" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <parameterGrid:ParameterGrid Grid.Column="0" />
+        <wpfControls:FrameControl Grid.Column="0">
+            <wpfControls:FrameControl.BodyContent>
+                <parameterGrid:ParameterGrid DataContext="{Binding Path=ChallengeParameterGridViewModel}"/>
+            </wpfControls:FrameControl.BodyContent>
+        </wpfControls:FrameControl>
         <Grid Grid.Column="1">
-          <Grid.RowDefinitions>
-              <RowDefinition></RowDefinition>
-              <RowDefinition></RowDefinition>
-          </Grid.RowDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
             <local:DescriptionControl Grid.Row="0" />
             <local:SolutionControl Grid.Row="1"></local:SolutionControl>
         </Grid>

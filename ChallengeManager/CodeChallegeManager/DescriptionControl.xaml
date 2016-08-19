@@ -9,7 +9,7 @@
                 <TextBlock Text="{Binding Title, FallbackValue=ChallengeTitle}" Style="{StaticResource BodyTextBlockLarge}"/>
             </wpfControls:FrameControl.HeaderLeftContent>
             <wpfControls:FrameControl.BodyContent>
-                <TextBlock Text="Description" FontWeight="Black"></TextBlock>
+                <TextBlock Text="Description" Style="{StaticResource BodyTextBlock}"></TextBlock>
             </wpfControls:FrameControl.BodyContent>
         </wpfControls:FrameControl>
     </Grid>
