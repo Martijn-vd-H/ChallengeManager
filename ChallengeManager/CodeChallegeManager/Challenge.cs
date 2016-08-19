@@ -31,13 +31,15 @@ namespace CodeChallengeManager
         public IEnumerable<TestParameters> TestValues { get; set; }
         public string Name { get; set; }
 
+        public bool HasSolution => Solution != null;
+
         #region Equality Members
 
         public bool Equals(Challenge other)
         {
-            return string.Equals(Description, other.Description) && 
-                Equals(Solution, other.Solution) && 
-                //Equals(TestValues, other.TestValues) &&
+            return string.Equals(Description, other.Description) &&
+                Equals(Solution, other.Solution) &&
+                   //Equals(TestValues, other.TestValues) &&
                    string.Equals(Name, other.Name);
         }
 

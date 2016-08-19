@@ -11,9 +11,11 @@ namespace Test.CodeChallengeManager
         private static MainViewModel _mainViewModel;
 
         [ClassInitialize]
-        private static void InitializeTestClass()
+        public static void InitializeTestClass(TestContext context)
         {
             _mainViewModel = new MainViewModel();
+            _mainViewModel.DataFilePath = TestHelperFunctions.GetTestDataFilePath();
+            _mainViewModel.LoadData();
         }
 
         [TestMethod]
@@ -22,7 +24,6 @@ namespace Test.CodeChallengeManager
             var testChallenge = TestHelperFunctions.GetTestChallenge();
             _mainViewModel.Challenges.Add(testChallenge);
             Assert.IsTrue(_mainViewModel.ChallengesParameterGridViewModel.GridData.Any());
-            Assert.IsTrue(_mainViewModel.ChallengesParameterGridViewModel.FindNext("TestChallenge", true, true));
         }
     }
 }

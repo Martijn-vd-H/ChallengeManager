@@ -23,7 +23,7 @@ namespace Test.CodeChallengeManager
         {
             var challenge = TestHelperFunctions.GetCompleteTestChallenge();
 
-            _mainViewModel.AddChallenge(challenge);
+            _mainViewModel.Challenges.Add(challenge);
 
             Assert.IsTrue(_mainViewModel.Challenges.Contains(challenge));
         }

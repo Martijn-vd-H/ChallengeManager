@@ -43,6 +43,14 @@
     <Reference Include="DpiNet.Fw.SyncFusion">
       <HintPath>..\..\..\DpiWerk\versie-7.5-sp4\bin\Release\DpiNet.Fw.SyncFusion.dll</HintPath>
     </Reference>
+    <Reference Include="DpiNET.ProjectData.Parameters, Version=7.5.4.2755, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DpiWerk\versie-7.5-sp4\bin\Release\DpiNET.ProjectData.Parameters.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DpiWerk\versie-7.5\Sources\External\log4net\Bin\NET40\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Data.WPF, Version=13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Syncfusion\Essential Studio\14.2.0.26\precompiledassemblies\14.2.0.26\4.0\Syncfusion.Data.WPF.dll</HintPath>
