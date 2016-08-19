@@ -34,6 +34,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DpiNET.Fw">
+      <HintPath>..\..\..\DpiWerk\versie-7.5-sp4\bin\Release\DpiNET.Fw.dll</HintPath>
+    </Reference>
+    <Reference Include="DpiNET.Fw.Resources">
+      <HintPath>..\..\..\DpiWerk\versie-7.5-sp4\bin\Release\DpiNET.Fw.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="DpiNet.Fw.SyncFusion">
+      <HintPath>..\..\..\DpiWerk\versie-7.5-sp4\bin\Release\DpiNet.Fw.SyncFusion.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Data.WPF, Version=13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Syncfusion\Essential Studio\14.2.0.26\precompiledassemblies\14.2.0.26\4.0\Syncfusion.Data.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfGrid.WPF, Version=13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Syncfusion\Essential Studio\14.2.0.26\precompiledassemblies\14.2.0.26\4.0\Syncfusion.SfGrid.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.WPF, Version=13.3400.0.7, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Syncfusion\Essential Studio\14.2.0.26\precompiledassemblies\14.2.0.26\4.0\Syncfusion.Shared.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />

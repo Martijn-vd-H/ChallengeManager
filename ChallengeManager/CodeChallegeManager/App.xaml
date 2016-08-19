@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:CodeChallengeManager"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="pack://application:,,,/DpiNET.Fw.Resources;component/Styles/InterfaceStyles.xaml"></ResourceDictionary>
     </Application.Resources>
 </Application>

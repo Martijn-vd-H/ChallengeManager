@@ -1,8 +1,17 @@
 <UserControl x:Class="CodeChallengeManager.DescriptionControl"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid>
-        
-    </Grid>
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:wpfControls="clr-namespace:Dpi.Fw.WpfControls;assembly=DpiNET.Fw">
     
+    <Grid Style="{StaticResource MainGrid}">
+        <wpfControls:FrameControl>
+            <wpfControls:FrameControl.HeaderLeftContent>
+                <TextBlock Text="{Binding Title, FallbackValue=ChallengeTitle}" Style="{StaticResource BodyTextBlockLarge}"/>
+            </wpfControls:FrameControl.HeaderLeftContent>
+            <wpfControls:FrameControl.BodyContent>
+                <TextBlock Text="Description" Style="{StaticResource BodyTextBlock}"></TextBlock>
+            </wpfControls:FrameControl.BodyContent>
+        </wpfControls:FrameControl>
+    </Grid>
+
 </UserControl>
