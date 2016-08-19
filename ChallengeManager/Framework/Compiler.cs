@@ -9,7 +9,7 @@ namespace Framework
     {
         public static void Compile(string code)
         {
-            throw new NotImplementedException();
+            //CSScriptLibrary.CSScript.Evaluator.CreateDelegate(code);
         }
 
         public static string Run(string code)
