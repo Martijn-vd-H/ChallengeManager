@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Xml.Linq;
+using Dpi.Fw.SyncFusion.ParameterGrid;
 
 namespace CodeChallengeManager
 {
@@ -30,6 +31,7 @@ namespace CodeChallengeManager
 
         public ObservableCollection<Challenge> Challenges { get; set; }
         public Challenge SelectedChallenge { get; set; }
+        public VMParameterGrid ChallengesParameterGridViewModel { get; set; }
 
         public void SaveData()
         {
